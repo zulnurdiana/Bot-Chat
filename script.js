@@ -1,7 +1,6 @@
 const tombol = document.getElementById("tombol");
 const input = document.getElementById("input");
 const boxdua = document.querySelector(".dua");
-const judul = document.querySelector(".judul");
 const boxsatu = document.querySelector(".satu");
 
 let sample = [
@@ -35,25 +34,7 @@ let kotakKiri = (arr) => {
   arr.after(kotak);
 };
 
-input.addEventListener("keyup", (e) => {
-  if (e.keyCode === 13) {
-    let ketik = input.value;
-    let kotak = document.createElement("div");
-    kotak.className = "box satu";
-    let h4 = document.createElement("h4");
-    h4.textContent = ketik;
-    kotak.append(h4);
-    boxdua.after(kotak);
-
-    setTimeout(() => {
-      kotakKiri(boxdua.nextElementSibling);
-      console.log(boxdua.nextElementSibling.nextElementSibling);
-      input.value = "";
-    }, 1500);
-  }
-});
-
-tombol.addEventListener("click", (e) => {
+let kotakKanan = () => {
   let ketik = input.value;
   let kotak = document.createElement("div");
   kotak.className = "box satu";
@@ -64,7 +45,20 @@ tombol.addEventListener("click", (e) => {
 
   setTimeout(() => {
     kotakKiri(boxdua.nextElementSibling);
-    console.log(boxdua.nextElementSibling.nextElementSibling);
+    input.value = "";
+  }, 1500);
+};
+
+input.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    kotakKanan();
+  }
+});
+
+tombol.addEventListener("click", (e) => {
+  kotakKanan();
+  setTimeout(() => {
+    kotakKiri(boxdua.nextElementSibling);
     input.value = "";
   }, 1500);
 });
