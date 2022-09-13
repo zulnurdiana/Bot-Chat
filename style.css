@@ -1,0 +1,61 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', cursive;
+}
+
+.container {
+  width: 600px;
+  margin: 6rem auto;
+  border: 2px solid black;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.judul {
+ text-align: center;
+}
+
+h4 {
+  font-size: 19px;
+}
+
+.footer {
+  margin-top: 15px;
+  align-self: center;
+}
+#tombol {
+  background-color: aqua;
+  width: 3rem;
+  height: 1.5rem;
+  font-weight: bold;
+
+}
+
+.box {
+  padding: 10px;
+  width: 300px;
+  background-color: rgba(25, 206, 238, 0.685);
+  text-align: center;
+  box-sizing: border-box;
+  margin: 10px 0;
+  position: relative;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.dua {
+  align-self: flex-start;
+}
+
+.satu {
+  align-self: flex-end;
+}
