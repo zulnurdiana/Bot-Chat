@@ -59,3 +59,8 @@ h4 {
 .satu {
   align-self: flex-end;
 }
+
+footer {
+  align-self: center;
+  
+}

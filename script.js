@@ -22,10 +22,22 @@ let sample = [
   {
     chat: "Let's play with me ! ✨",
   },
+  {
+    chat: "Pain make you stronger ! 👍",
+  },
+  {
+    chat: "Congrats for your achivement 🎶",
+  },
+  {
+    chat: "If you tired rest don't give up 👏",
+  },
 ];
 
 let kotakKiri = (arr) => {
   let random = Math.round(Math.random() * sample.length);
+  if (random > sample.length) {
+    random = 0;
+  }
   let kotak = document.createElement("div");
   kotak.className = "box dua";
   let h4 = document.createElement("h4");
@@ -50,7 +62,7 @@ let kotakKanan = () => {
 };
 
 input.addEventListener("keyup", (e) => {
-  if (e.keyCode === 13) {
+  if (e.code === "Enter") {
     kotakKanan();
   }
 });
