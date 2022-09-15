@@ -41,6 +41,8 @@ let kotakKiri = (arr) => {
   }
   let kotak = document.createElement("div");
   kotak.className = "box dua";
+  kotak.dataset.aos = "fade-right";
+  kotak.dataset.aosDelay = 100;
   let h4 = document.createElement("h4");
   h4.textContent = sample[random].chat;
   kotak.append(h4);
@@ -56,6 +58,8 @@ let kotakKanan = () => {
   }
   let kotak = document.createElement("div");
   kotak.className = "box satu";
+  kotak.dataset.aos = "fade-left";
+  kotak.dataset.aosDelay = 200;
   let h4 = document.createElement("h4");
   h4.textContent = ketik;
   kotak.append(h4);
@@ -64,7 +68,7 @@ let kotakKanan = () => {
   setTimeout(() => {
     kotakKiri(boxdua.nextElementSibling);
     input.value = "";
-  }, 1500);
+  }, 1000);
 };
 
 input.addEventListener("keyup", (e) => {
