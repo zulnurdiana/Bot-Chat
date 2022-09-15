@@ -36,7 +36,7 @@ let sample = [
 
 let kotakKiri = (arr) => {
   let random = Math.round(Math.random() * sample.length);
-  if (random > sample.length) {
+  if (!sample[random].chat) {
     random = 0;
   }
   let kotak = document.createElement("div");
