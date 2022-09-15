@@ -35,10 +35,13 @@ h4 {
   margin-top: 15px;
   align-self: center;
 }
+
+#input {
+  padding: 5px;
+}
 #tombol {
   background-color: aqua;
-  width: 3rem;
-  height: 1.5rem;
+  padding: 5px 15px;
   font-weight: bold;
   transition: .5s;
 }

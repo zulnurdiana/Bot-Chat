@@ -2,6 +2,7 @@ const tombol = document.getElementById("tombol");
 const input = document.getElementById("input");
 const boxdua = document.querySelector(".dua");
 const boxsatu = document.querySelector(".satu");
+input.focus();
 
 let sample = [
   {
@@ -33,8 +34,6 @@ let sample = [
   },
 ];
 
-
-
 let kotakKiri = (arr) => {
   let random = Math.round(Math.random() * sample.length);
   if (random > sample.length) {
@@ -50,6 +49,11 @@ let kotakKiri = (arr) => {
 
 let kotakKanan = () => {
   let ketik = input.value;
+  if (!ketik) {
+    alert("Pesan wajib diisi ‼");
+    input.focus();
+    return;
+  }
   let kotak = document.createElement("div");
   kotak.className = "box satu";
   let h4 = document.createElement("h4");
@@ -71,8 +75,4 @@ input.addEventListener("keyup", (e) => {
 
 tombol.addEventListener("click", (e) => {
   kotakKanan();
-  setTimeout(() => {
-    kotakKiri(boxdua.nextElementSibling);
-    input.value = "";
-  }, 1500);
 });
